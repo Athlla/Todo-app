@@ -12,25 +12,34 @@
     top: 0;
     left: 0;
     height: 300px;
-    width: 100vw;
+    width: 100%;
     background: url('/images/bg-desktop-light.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     z-index: -1;
   }
 
   .Logo {
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 10px;
     font-weight: 700;
     color: $very-light-gray;
+
+    @include medium {
+      font-size: 3rem;
+    }
   }
 
   .Theme {
     color: $very-light-gray;
 
     img {
-      width: 2rem;
+      width: 1.5rem;
+
+      @include medium {
+        width: 2rem;
+      }
     }
   }
 }

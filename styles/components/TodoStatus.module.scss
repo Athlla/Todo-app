@@ -1,0 +1,22 @@
+@use 'styles' as *;
+
+.Status {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+
+  @include small {
+    display: none;
+  }
+
+  span {
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      color: $very-dark-grayish-blue;
+    }
+  }
+}

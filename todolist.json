@@ -1,26 +1,32 @@
 [
   {
-    "id": 1,
-    "todo": "Complete online JavaScript course"
+    "id": "4M6rxnF8KHm3Ff-gjs6yl",
+    "todo": "Complete online JavaScript course",
+    "completed": true
   },
   {
-    "id": 2,
-    "todo": "Jog around the park 3x"
+    "id": "4bm0DIKQT4VHiiW7F2VTQ",
+    "todo": "Jog around the park 3x",
+    "completed": false
   },
   {
-    "id": 3,
-    "todo": "10 minutes meditation"
+    "id": "DLxvgCwUsIcZiMSkmvwtj",
+    "todo": "10 minutes meditation",
+    "completed": false
   },
   {
-    "id": 4,
-    "todo": "Read for 1 hourRead for 1 hour"
+    "id": "-SzFLCt8pOyeggYRcSQEt",
+    "todo": "Read for 1 hourRead for 1 hour",
+    "completed": false
   },
   {
-    "id": 5,
-    "todo": "Pick up groceries"
+    "id": "EdoK4cMwSiWElATDygobR",
+    "todo": "Pick up groceries",
+    "completed": false
   },
   {
-    "id": 6,
-    "todo": "Complete Todo App on Frontend Mentor"
+    "id": "K0MQ2vSjKVMVh99Xn1HKl",
+    "todo": "Complete Todo App on Frontend Mentor",
+    "completed": false
   }
 ]

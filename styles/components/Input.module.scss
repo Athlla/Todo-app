@@ -7,19 +7,28 @@
   display: flex;
   border-radius: 8px;
   background: $very-light-gray;
-  padding: 0 2rem;
-  gap: 2rem;
+  padding: 0 1rem;
+  gap: 1rem;
 
-  .Input {
-    background: transparent;
+  @include medium {
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+
+  form {
     flex: 1;
-    border: none;
-    font-family: 'Josefin Sans', sans-serif;
-    padding-right: 2rem;
-    font-size: 1em;
+    .Input {
+      background: transparent;
+      height: 100%;
+      width: 100%;
+      border: none;
+      font-family: 'Josefin Sans', sans-serif;
+      padding-right: 2rem;
+      font-size: 1em;
 
-    &:focus {
-      outline: none;
+      &:focus {
+        outline: none;
+      }
     }
   }
 }

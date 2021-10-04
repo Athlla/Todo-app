@@ -5,6 +5,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  span {
+    display: none;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 28px;
+    height: 28px;
+    background: $check-background;
+    border-radius: 50%;
+    z-index: 0;
+  }
 
   .Checkbox {
     position: relative;
@@ -17,7 +30,6 @@
     &:checked {
       &::before {
         background: $check-background;
-        background-clip: border-box;
       }
 
       &::after {
@@ -38,7 +50,8 @@
     &:before {
       width: 1.5rem;
       height: 1.5rem;
-      border: 1px solid lightgray;
+      background: $very-light-gray;
+      border: 1px solid $light-grayish-blue;
     }
 
     &:after {
