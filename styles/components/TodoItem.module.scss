@@ -1,0 +1,27 @@
+@use 'styles' as *;
+
+.TodoItem {
+  color: $very-dark-grayish-blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  height: 4rem;
+  padding: 0 2rem;
+  border-bottom: 1px solid $light-grayish-blue;
+
+  &:hover {
+    .Remove {
+      display: block;
+    }
+  }
+
+  .Item {
+    flex: 1;
+  }
+
+  .Remove {
+    cursor: pointer;
+    display: none;
+  }
+}

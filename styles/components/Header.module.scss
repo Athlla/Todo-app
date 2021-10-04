@@ -1,0 +1,36 @@
+@use 'styles' as *;
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 100vw;
+    background: url('/images/bg-desktop-light.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .Logo {
+    font-size: 3rem;
+    letter-spacing: 10px;
+    font-weight: 700;
+    color: $very-light-gray;
+  }
+
+  .Theme {
+    color: $very-light-gray;
+
+    img {
+      width: 2rem;
+    }
+  }
+}

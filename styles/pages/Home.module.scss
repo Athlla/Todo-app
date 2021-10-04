@@ -1,0 +1,13 @@
+@use 'styles' as *;
+
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 4rem;
+  gap: 2rem;
+}

@@ -1,5 +1,4 @@
-@use 'partials/breakpoints';
-@use 'partials/colors';
+@use 'styles' as *;
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
 * {
@@ -16,4 +15,5 @@ a {
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-family: 18px;
+  background-color: $very-light-gray;
 }
