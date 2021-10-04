@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 import { TodoContext } from 'context/Todo';
 import TodoStatus from './TodoStatus';
@@ -8,29 +8,41 @@ import Card from './Card';
 import styles from 'styles/components/TodoList.module.scss';
 
 const TodoList = () => {
+  const [active, setActive] = useState<'All' | 'Active' | 'Completed'>('All');
+
   const { todo, removeCompleted } = useContext(TodoContext);
+
+  const filteredTodo =
+    active === 'Active'
+      ? todo.filter((item) => item.completed === false)
+      : active === 'Completed'
+      ? todo.filter((item) => item.completed === true)
+      : todo;
 
   return (
     <>
       <div className={styles.TodoList}>
-        {todo.map((item) => (
+        {filteredTodo.map((item) => (
           <TodoItem key={item.id} {...item}>
             {item.todo}
           </TodoItem>
         ))}
         <div className={styles.Utilities}>
           <p>
-            {todo.length}
-            {todo.length === 1 || todo.length === 0 ? ' item' : ' items'} left
+            {filteredTodo.length}
+            {filteredTodo.length === 1 || filteredTodo.length === 0
+              ? ' item'
+              : ' items'}{' '}
+            left
           </p>
-          <TodoStatus />
+          <TodoStatus active={active} setActive={setActive} />
           <div className={styles.Clear} onClick={removeCompleted}>
             Clear Completed
           </div>
         </div>
       </div>
       <Card mobileOnly>
-        <TodoStatus />
+        <TodoStatus active={active} setActive={setActive} />
       </Card>
     </>
   );

@@ -20,7 +20,7 @@ const TodoItem = ({ children, completed, id }: Props) => {
         setCompleted(id);
       }}
     >
-      <Checkbox id={id} completed={completed} />
+      <Checkbox completed={completed} />
       <p className={`${styles.Item} ${completed && styles.Checked}`}>
         {children}
       </p>
