@@ -14,11 +14,11 @@
   @include medium {
     padding: 0 2rem;
     gap: 2rem;
-  }
 
-  &:hover {
-    .Remove {
-      display: block;
+    &:hover {
+      .Remove {
+        display: block;
+      }
     }
   }
 
@@ -28,7 +28,11 @@
 
   .Remove {
     cursor: pointer;
-    display: none;
+    display: block;
+
+    @include medium {
+      display: none;
+    }
   }
 
   .Checked {
