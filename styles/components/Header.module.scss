@@ -1,4 +1,4 @@
-@use 'styles' as *;
+@use 'styles/breakpoints' as *;
 
 .Header {
   display: flex;
@@ -13,18 +13,25 @@
     left: 0;
     height: 300px;
     width: 100%;
-    background: url('/images/bg-desktop-light.jpg');
+    background: var(--mobile-header);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     z-index: -1;
+
+    @include medium {
+      background: var(--desktop-header);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
   }
 
   .Logo {
     font-size: 2rem;
     letter-spacing: 10px;
     font-weight: 700;
-    color: $very-light-gray;
+    color: white;
 
     @include medium {
       font-size: 3rem;
@@ -32,7 +39,7 @@
   }
 
   .Theme {
-    color: $very-light-gray;
+    color: white;
 
     img {
       width: 1.5rem;

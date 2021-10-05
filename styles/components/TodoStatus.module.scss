@@ -1,4 +1,4 @@
-@use 'styles' as *;
+@use 'styles/breakpoints' as *;
 
 .Status {
   display: flex;
@@ -6,6 +6,8 @@
   justify-content: center;
   gap: 1rem;
   align-items: center;
+  color: var(--dark-grayish-blue);
+  font-weight: 700;
 
   @include small {
     display: none;
@@ -16,11 +18,11 @@
 
     &:hover,
     &:active {
-      color: $very-dark-grayish-blue;
+      color: var(--primary-text);
     }
   }
 
   .Active {
-    color: $bright-blue;
+    color: var(--bright-blue);
   }
 }

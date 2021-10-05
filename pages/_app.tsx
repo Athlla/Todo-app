@@ -1,12 +1,16 @@
+import { ThemeProvider } from 'next-themes';
+
 import TodoProvider from 'context/Todo';
 
-import 'styles/globals.scss';
+import 'styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <TodoProvider>
-      <Component {...pageProps} />;
-    </TodoProvider>
+    <ThemeProvider defaultTheme="light">
+      <TodoProvider>
+        <Component {...pageProps} />;
+      </TodoProvider>
+    </ThemeProvider>
   );
 }
 

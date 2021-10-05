@@ -1,11 +1,11 @@
-@use 'styles' as *;
+@use 'styles/breakpoints' as *;
 
 .TodoList {
   width: 100%;
-  background: $very-light-gray;
+  background: var(--secondary-background);
   border-radius: 8px;
-  box-shadow: 0 10px 42px -2px $light-grayish-blue;
-  color: $dark-grayish-blue;
+  box-shadow: 0 10px 42px -2px var(--shadow);
+  color: var(--secondary-text);
   font-size: 14px;
 
   @include medium {
@@ -28,7 +28,7 @@
     .Clear {
       &:hover {
         cursor: pointer;
-        color: $very-dark-grayish-blue;
+        color: var(--primary-text);
       }
     }
   }

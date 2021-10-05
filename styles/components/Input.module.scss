@@ -1,12 +1,11 @@
-@use 'styles' as *;
+@use 'styles/breakpoints' as *;
 
 .Todo {
   width: 100%;
   height: 4rem;
-  background: $dark-grayish-blue;
+  background: var(--secondary-background);
   display: flex;
   border-radius: 8px;
-  background: $very-light-gray;
   padding: 0 1rem;
   gap: 1rem;
 

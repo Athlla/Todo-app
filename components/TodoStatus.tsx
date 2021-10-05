@@ -11,19 +11,19 @@ const TodoStatus = ({ active, setActive }: Props) => {
   return (
     <div className={styles.Status}>
       <span
-        className={active === 'All' && styles.Active}
+        className={`${active === 'All' && styles.Active}`}
         onClick={() => setActive('All')}
       >
         All
       </span>
       <span
-        className={active === 'Active' && styles.Active}
+        className={`${active === 'Active' && styles.Active}`}
         onClick={() => setActive('Active')}
       >
         Active
       </span>
       <span
-        className={active === 'Completed' && styles.Active}
+        className={`${active === 'Completed' && styles.Active}`}
         onClick={() => setActive('Completed')}
       >
         Completed

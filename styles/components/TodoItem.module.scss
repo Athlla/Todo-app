@@ -1,14 +1,14 @@
-@use 'styles' as *;
+@use 'styles/breakpoints' as *;
 
 .TodoItem {
-  color: $very-dark-grayish-blue;
+  color: var(--primary-text);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   height: 4rem;
   padding: 0 1rem;
-  border-bottom: 1px solid $light-grayish-blue;
+  border-bottom: 1px solid var(--border);
   cursor: pointer;
 
   @include medium {
@@ -32,7 +32,7 @@
   }
 
   .Checked {
-    color: $dark-grayish-blue;
+    color: var(--secondary-text);
     text-decoration: line-through;
   }
 
